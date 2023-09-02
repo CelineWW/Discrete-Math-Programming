@@ -20,4 +20,4 @@ T, F
 F, T
 F, F
 
-![Alt text](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/Logical_Operator/A1_FT.png)
+![A1_FT](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/A1_Logical_Operator/A1_FT.png)
