@@ -20,9 +20,9 @@ T, F
 F, T
 F, F
 
-![A1_FT](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/A1_Logical_Operator/A1_FT.png)
+![A1_FT](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA1_Logical_Operator/A1_FT.png)
 
-## PA2 
+## PA2 Sets Bitwise Operation
 Use the bit string representa!on of sets to perform union, intersec!on, and complement operations.
 Assume that the universal set U = {a, b, c, d, e, f, g, h}.
 The program will prompt the user to enter two subsets of U. For example, if A = {a, b, c}, the user will enter 11100000.
@@ -37,3 +37,30 @@ The complement of A = 00011111
 ![PA2_Sets_Bitwise_Operation_code2.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA2_Sets_Bitwise_Operation/PA2_Sets_Bitwise_Operation_code2.png)
 
 ![PA2_Sets_Bitwise_Operation_execution1.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA2_Sets_Bitwise_Operation/PA2_Sets_Bitwise_Operation_execution1.png)
+
+## PA3 Binary Search
+1. Prompt the user to enter the number they want to search.
+2. Perform a binary search and print the subscript/index/loca!on of the integer if found, and print 0 if not found.
+3. Store the data in a[1] to a[n].
+
+```
+import math
+def binary_search(list, search):
+    print(f'The list you entered is: \t\t {list}')
+    print(f'The number you want to search is: \t {search}')
+    i = 0
+    j = 9 
+    while i < j:
+        m = math.floor((i + j) / 2)
+        if search > list[m]:
+            i = m + 1
+        else:
+            j = m
+    if search == list[i]:  
+        print(f"The index of the number: {i + 1}")
+        return i + 1
+    else:
+        print(f'The searching nubmer is not in the list')
+        return 0
+```
+![Binary search source code.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA3_Binary_Search/Binary%20search%20source%20code.png)
