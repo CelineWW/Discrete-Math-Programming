@@ -84,15 +84,18 @@ def binary_search(list, search):
     struct treenode *addtree(struct tnode *p, char *w)
     {
     if (p == NULL) {
-            p = talloc();
-            p->word = strdup(w);           /* make a new node */
-            p->left = p->right = NULL;
-        }
-        else if (strcmp(w, p->word < 0)    /* less than. into left subtree */
-            p->left = addtree(p->left, w);
-        else if (strcmp(w, p->word > 0)    /* greater than. into right subtree */
-            p->right = addtree(p->right, w);
-    return p; }
+        p = talloc();
+        p->word = strdup(w);           /* make a new node */
+        p->left = p->right = NULL;
+    }
+    else if (strcmp(w, p->word < 0)){   /* less than. into left subtree */
+        p->left = addtree(p->left, w);
+        } 
+    else if (strcmp(w, p->word > 0)){    /* greater than. into right subtree */
+        p->right = addtree(p->right, w);
+        } 
+    return p; 
+    }
     ```
 2. Implement Inorder Traversal Algorithm
    - Kernighan/Ritchie's treeprint() function 
@@ -106,4 +109,7 @@ def binary_search(list, search):
         } 
     }
    ```
-
+![PA4_BinnaryTree_Code_integer.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA4_Binary_Search_Tree/PA4_BinnaryTree_Code_integer.png)
+![PA4_BinnaryTree_SampleRun_integer.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA4_Binary_Search_Tree/PA4_BinnaryTree_SampleRun_integer.png)
+![PA4_BinnaryTree_Code_string.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA4_Binary_Search_Tree/PA4_BinnaryTree_Code_string.png)
+![PA4_BinnaryTree_SampleRun_string.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA4_Binary_Search_Tree/PA4_BinnaryTree_SampleRun_string.png)
