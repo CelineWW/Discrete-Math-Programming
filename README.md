@@ -64,3 +64,46 @@ def binary_search(list, search):
         return 0
 ```
 ![Binary search source code.png](https://github.com/CelineWW/Discrete_Math_Programming/blob/main/PA3_Binary_Search/Binary%20search%20source%20code.png)
+
+
+## PA4 Binary Tree Insertion and InOrderTraversal
+1. Implement the Insertion procedure of Binary Search Trees Algorithm 
+  - Locating an Item in or Adding an Item to a Binary Search Tree
+
+    -  The treenode structure 
+    ```
+    struct tnode {
+        char *word;
+        struct tnode *left;
+        struct tnode *right;
+    };
+    ```
+
+    - Kernighan/Ritchie's addtree() function
+    ```
+    struct treenode *addtree(struct tnode *p, char *w)
+    {
+    if (p == NULL) {
+            p = talloc();
+            p->word = strdup(w);           /* make a new node */
+            p->left = p->right = NULL;
+        }
+        else if (strcmp(w, p->word < 0)    /* less than. into left subtree */
+            p->left = addtree(p->left, w);
+        else if (strcmp(w, p->word > 0)    /* greater than. into right subtree */
+            p->right = addtree(p->right, w);
+    return p; }
+    ```
+2. Implement Inorder Traversal Algorithm
+   - Kernighan/Ritchie's treeprint() function 
+   ```
+   void treeprint(struct tnode *p)
+   {
+       if (p != NULL) {
+           treeprint(p->left);
+           printf(p->word);
+           treeprint(p->right);
+        } 
+    }
+   ```
+
